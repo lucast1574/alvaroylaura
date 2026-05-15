@@ -16,7 +16,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
     background-color: #EAEAEA;
     color: var(--text-color);
     line-height: 1.6;
@@ -29,14 +29,15 @@ body {
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     overflow: hidden;
     text-align: center;
+    position: relative;
 }
 
-    h1, h2, h3 {
+h1, h2, h3 {
     margin: 0;
     font-weight: 400;
 }
 
-    /* --- SECCIÓN 1: FOTO PRINCIPAL Y NOMBRES --- */
+/* --- SECCIÓN 1: FOTO PRINCIPAL Y NOMBRES --- */
 .sec-1-hero {
     position: relative;
     width: 100%;
@@ -75,7 +76,7 @@ body {
 }
 
 .hero-overlay h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 2.8rem;
     margin: 0;
     letter-spacing: 2px;
@@ -92,58 +93,57 @@ body {
 
 /* --- SECCIÓN 2: VERSÍCULO (Limpia y Enmarcada) --- */
 .sec-2-versiculo {
-    position: relative; /* Necesario para que las flores se peguen a las esquinas */
-    background-color: var(--sec-bg-alt); /* Color crema */
+    position: relative;
+    background-color: var(--sec-bg-alt);
     padding: 100px 40px;
     text-align: center;
-    overflow: hidden; /* Para que las flores no creen scroll si se salen un poquito */
+    overflow: hidden;
 }
 
 .verse-content {
     max-width: 500px;
     margin: 0 auto;
     position: relative;
-    z-index: 2; /* Por encima de las flores */
+    z-index: 2;
 }
 
 .verse-main {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 1.6rem;
     line-height: 1.6;
-    color: var(--sec-text-alt); /* Morado */
+    color: var(--sec-text-alt);
     font-style: italic;
     margin-bottom: 20px;
 }
 
 .verse-citation {
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--font-great-vibes), cursive;
     font-size: 3rem;
     color: var(--sec-text-alt);
     margin: 0;
     font-weight: 400;
 }
 
-/* Estilos para las flores en las esquinas */
 .verse-flower {
     position: absolute;
-    width: 150px; /* Tamaño delicado */
+    width: 150px;
     height: auto;
-    opacity: 0.6; /* Un poco transparentes para que no pesen tanto */
+    opacity: 0.6;
 }
 
 .top-left-flower {
     top: 10px;
     left: 10px;
-    transform: rotate(180deg); /* Ajusta la rotación según tu imagen */
+    transform: rotate(180deg);
 }
 
 .bottom-right-flower {
     bottom: 10px;
     right: 10px;
-    transform: rotate(180deg); /* Gira la flor para que apunte hacia adentro */
+    transform: rotate(180deg);
 }
 
-    /* --- SECCIÓN 3: FOTO SEPARADORA --- */
+/* --- SECCIÓN 3: FOTO SEPARADORA --- */
 .sec-3-photo {
     width: 100%;
     height: 300px;
@@ -163,7 +163,7 @@ body {
 .sec-4-casamos {
     background-color: var(--sec-bg-alt);
     color: var(--sec-text-alt);
-    padding: 60px 20px; /* Más aire arriba y abajo */
+    padding: 60px 20px;
 }
 
 .casamos-header {
@@ -174,12 +174,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* Reducimos un poco las flores para que no compitan con el texto */
 .flower-img {
     width: 45px; 
     height: auto;
     object-fit: contain;
-    opacity: 0.85; /* Un pelín transparentes para suavizar */
+    opacity: 0.85;
 }
 
 .casamos-text {
@@ -189,20 +188,20 @@ body {
 }
 
 .casamos-text .nos {
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--font-great-vibes), cursive;
     font-size: 3.5rem;
     line-height: 0.6;
     margin-left: -30px;
 }
 
 .casamos-text .casamos {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 2.5rem;
     letter-spacing: 2px;
 }
 
 #saludo-personalizado {
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--font-great-vibes), cursive;
     font-size: 2.3rem;
     color: var(--sec-text-alt);
     line-height: 1.1;
@@ -211,25 +210,23 @@ body {
 }
 
 .invite-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
-    margin-bottom: 35px; /* Aire antes de la línea */
+    margin-bottom: 35px;
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* La nueva línea separadora */
 .divider-line {
     border: 0;
     height: 1px;
-    background-color: #d1c5bc; /* Color crema oscurecido */
+    background-color: #d1c5bc;
     width: 40%;
     margin: 0 auto 30px auto;
 }
 
-/* --- TEXTO DE LOS PADRES --- */
 .parents-container {
     display: flex;
     flex-direction: column;
@@ -237,9 +234,9 @@ body {
 }
 
 .bendicion-text {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 1.3rem;
-    font-style: italic; /* Cursiva para darle un toque clásico */
+    font-style: italic;
     margin: 0 0 20px 0;
     color: var(--sec-text-alt);
 }
@@ -251,12 +248,11 @@ body {
     color: var(--sec-text-alt);
 }
 
-/* El ampersand (&) separador */
 .ampersand {
     display: block;
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--font-great-vibes), cursive;
     font-size: 2rem;
-    color: #C1B4A9; /* Color doradito/crema de contraste */
+    color: #C1B4A9;
     margin: 15px 0 10px 0;
     line-height: 1;
 }
@@ -294,7 +290,7 @@ body {
 }
 
 .reserva-content h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 2rem;
     letter-spacing: 1px;
     color: var(--sec5-text);
@@ -314,7 +310,7 @@ body {
 }
 
 .reserva-content h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 2rem;
     margin: 0 0 15px 0;
     color: var(--sec5-text);
@@ -349,7 +345,7 @@ body {
 }
 
 .cal-col .cal-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 1.8rem;
     line-height: 1;
 }
@@ -393,14 +389,14 @@ body {
 }
 
 .ceremonia-title-wrapper .nuestra {
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--font-great-vibes), cursive;
     font-size: 3rem;
     line-height: 0.7;
     margin-left: -20px;
 }
 
 .ceremonia-title-wrapper .ceremonia {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 2.2rem;
     letter-spacing: 1px;
 }
@@ -413,13 +409,13 @@ body {
 }
 
 .ceremonia-lugar {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 2rem;
     margin: 0 0 5px 0;
 }
 
 .ceremonia-hora {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 1.6rem;
     margin: 0 0 30px 0;
 }
@@ -442,10 +438,10 @@ body {
     transform: translateY(-2px);
 }
 
-    /* --- SECCIÓN 7: DRESS CODE (Ilustración Abajo) --- */
+/* --- SECCIÓN 7: DRESS CODE --- */
 .sec-7-dresscode {
     display: flex;
-    flex-direction: column; /* Esto pone el texto arriba y la imagen abajo */
+    flex-direction: column;
     align-items: center;
     background-color: var(--sec5-bg);
     color: var(--sec5-text);
@@ -455,11 +451,11 @@ body {
 .dresscode-text {
     width: 100%;
     text-align: center;
-    margin-bottom: 35px; /* Da un respiro antes de la ilustración */
+    margin-bottom: 35px;
 }
 
 .dresscode-text h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 2.2rem;
     margin: 0;
     letter-spacing: 1px;
@@ -467,7 +463,7 @@ body {
 }
 
 .dresscode-text .elegante {
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--font-great-vibes), cursive;
     font-size: 3.5rem;
     line-height: 1;
     margin: 5px 0 20px 0;
@@ -475,8 +471,8 @@ body {
 }
 
 .dresscode-text p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem; /* Un poco más grande para mejor lectura */
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 0.85rem;
     line-height: 1.4;
     margin: 0;
 }
@@ -489,12 +485,12 @@ body {
 
 .dresscode-img-container img {
     width: 100%;
-    max-width: 200px; /* Tamaño ideal para que destaque en el centro */
+    max-width: 200px;
     height: auto;
     object-fit: contain;
 }
 
-    /* --- SECCIÓN 8: REGALOS --- */
+/* --- SECCIÓN 8: REGALOS --- */
 .sec-8-regalos {
     background-color: var(--sec-bg-alt);
     color: var(--sec-text-alt);
@@ -513,7 +509,7 @@ body {
 
 .regalos-text {
     flex: 1;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 1.3rem;
     line-height: 1.4;
     text-align: left;
@@ -542,7 +538,7 @@ body {
     object-fit: contain;
 }
 
-    /* --- SECCIÓN 9: HONOR (NUEVA ESTRUCTURA) --- */
+/* --- SECCIÓN 9: HONOR --- */
 .sec-9-honor {
     background-color: var(--sec5-bg);
     color: var(--sec5-text);
@@ -563,27 +559,27 @@ body {
 
 .honor-top-line {
     display: flex;
-    align-items: center; /* Alinea perfectamente el texto con el número */
+    align-items: center;
     justify-content: center;
 }
 
 .honor-top-line .texto {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 1.8rem;
     margin-right: 15px;
 }
 
 .honor-top-line .number {
-    font-family: 'Montserrat', sans-serif; /* Fuente limpia, evita que parezca una 'I' */
+    font-family: var(--font-montserrat), sans-serif;
     font-size: 2.5rem; 
     font-weight: 400;
-    line-height: 0.8; /* Ajusta la altura visual */
+    line-height: 0.8;
 }
 
 .honor-bottom-line {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 1.8rem;
-    margin-top: 15px; /* Espacio entre las dos líneas */
+    margin-top: 15px;
 }
 
 .honor-corner-flower {
@@ -598,11 +594,11 @@ body {
 .flower-bottom-left { bottom: 15px; left: 15px; }
 
 .adults-only-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
     font-size: 0.85rem;
-    margin-top: 30px; /* Separación del texto principal */
+    margin-top: 30px;
     padding-top: 15px;
-    border-top: 1px solid rgba(245, 237, 233, 0.4); /* Línea sutil del color crema */
+    border-top: 1px solid rgba(245, 237, 233, 0.4);
     color: var(--sec5-text);
     line-height: 1.6;
     font-weight: 300;
@@ -611,10 +607,10 @@ body {
 }
 
 .adults-only-text strong {
-    font-weight: 600; /* Resalta el "solo para adultos" */
+    font-weight: 600;
 }
 
-    /* --- FOTO TRANSICIÓN --- */
+/* --- FOTO TRANSICIÓN --- */
 .sec-transition-photo {
     width: 100%;
     height: 300px;
@@ -629,7 +625,7 @@ body {
     object-fit: cover;
 }
 
-    /* --- SECCIÓN 10: CONFIRMACIÓN --- */
+/* --- SECCIÓN 10: CONFIRMACIÓN --- */
 .sec-10-confirmacion {
     display: flex;
     background-color: var(--sec-bg-alt);
@@ -648,7 +644,7 @@ body {
 }
 
 .confirmacion-text .emocionados {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-cormorant), serif;
     font-size: 1.4rem;
     line-height: 1.4;
     margin: 0 0 15px 0;
@@ -696,57 +692,45 @@ body {
     object-fit: cover;
 }
 
-    /* Ajustes responsivos generales */
+/* Ajustes responsivos */
 @media (max-width: 480px) {
     .container { width: 100%; }
-    .parents-container { flex-direction: column; text-align: center; }
-    .parent-col { width: 100%; }
     .sec-5-reserva, .sec-7-dresscode, .sec-10-confirmacion { flex-direction: column; }
     .reserva-photo-container, .confirmacion-photo-container { width: 100%; height: 250px; flex: none; }
     .reserva-photo-container img, .confirmacion-photo-container img { position: relative; height: 100%; }
     .regalos-container { flex-direction: column; text-align: center; }
     .regalos-text, .regalos-cuentas { text-align: center; }
     .dresscode-text { padding-right: 0; margin-bottom: 20px; }
-        
-        /* Ajustes para el texto de honor en celulares */
     .honor-top-line .texto { font-size: 1.5rem; margin-right: 10px; }
     .honor-top-line .number { font-size: 4rem; }
     .honor-bottom-line { font-size: 1.5rem; margin-top: 10px;}
-
-    #saludo-personalizado {
-        font-size: 2rem; /* Lo hacemos ligeramente más pequeño en móvil */
-    }
+    #saludo-personalizado { font-size: 2rem; }
 }
 
-@media (max-width: 480px) {
-    .sec-10-confirmacion { flex-direction: column; }
-}
-
-/* --- ANIMACIONES SUAVES --- */
+/* --- ANIMACIONES --- */
 .fade-in {
     opacity: 0;
-    transform: translateY(40px); /* Empieza 40px más abajo */
+    transform: translateY(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: translateY(0); /* Sube a su posición original */
+    transform: translateY(0);
 }
 
-/* Opcional: Retrasos para que los elementos aparezcan en cascada (uno tras otro) */
 .delay-1 { transition-delay: 0.2s; }
 .delay-2 { transition-delay: 0.4s; }
 .delay-3 { transition-delay: 0.6s; }
 
-/* --- BOTÓN DE MÚSICA FLOTANTE --- */
+/* --- BOTÓN DE MÚSICA --- */
 .music-btn {
     position: fixed;
     bottom: 25px;
     right: 25px;
     width: 55px;
     height: 55px;
-    background-color: var(--sec-text-alt); /* Morado oscuro */
+    background-color: var(--sec-text-alt);
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -765,7 +749,6 @@ body {
     background-color: var(--purple-dark);
 }
 
-/* Animación de latido cuando la música suena */
 .music-btn.playing {
     animation: pulse-music 2s infinite;
 }
@@ -776,11 +759,7 @@ body {
     100% { box-shadow: 0 0 0 0 rgba(122, 60, 155, 0); }
 }
 
-
-/* SECCIÓN SOBRE */
-
-
-/* --- SOBRE ANIMADO (Estructura de 4 solapas sólidas) --- */
+/* --- SOBRE --- */
 .envelope-screen {
     position: fixed;
     top: 0;
@@ -800,12 +779,11 @@ body {
     text-align: center;
 }
 
-/* El fondo del sobre (la parte interior trasera) */
 .envelope {
     position: relative;
     width: 320px;
     height: 200px;
-    background-color: #d1c5bc; /* Más oscurito para dar sombra interior */
+    background-color: #d1c5bc;
     border-radius: 5px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     margin: 0 auto 20px;
@@ -815,8 +793,6 @@ body {
 .envelope:hover {
     transform: translateY(-5px);
 }
-
-/* --- LAS PIEZAS FRONTALES DEL SOBRE --- */
 
 .front-left {
     position: absolute;
@@ -843,12 +819,11 @@ body {
     bottom: 0; left: 0;
     border-left: 160px solid transparent;
     border-right: 160px solid transparent;
-    border-bottom: 110px solid #ede1dc; /* Un poco más oscuro para separar */
+    border-bottom: 110px solid #ede1dc;
     z-index: 3;
     border-radius: 0 0 5px 5px;
 }
 
-/* Solapa superior que se abre */
 .flap {
     position: absolute;
     top: 0; left: 0;
@@ -856,15 +831,13 @@ body {
     border-right: 160px solid transparent;
     border-top: 115px solid #ede4df;
     transform-origin: top;
-    transition: transform 1.2s ease-out, z-index 0s 0.3s; /* El z-index cambia a la mitad del giro */
+    transition: transform 1.2s ease-out, z-index 0s 0.3s;
     z-index: 4;
 }
 
-/* SELLO DE CERA LISO (Atado a la solapa) */
 .flap::after {
     content: '';
     position: absolute;
-    /* Al usar bordes, la posición relativa es desde el vértice */
     top: -25px; 
     left: -25px;
     width: 50px;
@@ -875,30 +848,29 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* --- LA CARTA --- */
 .letter {
     position: absolute;
     top: 10px;
-    left: 15px; /* Centrada en el nuevo ancho */
+    left: 15px;
     width: 290px;
     height: 180px;
     background-color: #ffffff;
-    z-index: 1; /* Escondida detrás de las solapas frontales */
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 1.2s ease 0.5s; /* Retraso para que la solapa se abra primero */
+    transition: transform 1.2s ease 0.5s;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
 .letter-text {
-    font-family: 'Great Vibes', cursive;
+    font-family: var(--font-great-vibes), cursive;
     font-size: 3.2rem;
     color: var(--sec-text-alt);
 }
 
 .open-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
     color: var(--sec5-text);
     font-weight: 500;
     letter-spacing: 2px;
@@ -911,20 +883,18 @@ body {
     50% { opacity: 0.5; }
 }
 
-/* --- ANIMACIONES AL ABRIR --- */
 .envelope-container.open .flap {
     transform: rotateX(180deg);
-    z-index: 0; /* Se va para atrás al abrirse */
+    z-index: 0;
 }
 
-/* Desvanece el sello al abrir para que no se vea por detrás */
 .envelope-container.open .flap::after {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .envelope-container.open .letter {
-    transform: translateY(-120px); /* La carta sale elegantemente */
+    transform: translateY(-120px);
 }
 
 .envelope-screen.hidden {

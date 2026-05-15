@@ -1,9 +1,0 @@
-.git
-.gitignore
-.DS_Store
-web/.DS_Store
-web/image/.DS_Store
-web/temp.html
-docker-compose.yml
-Dockerfile
-.dockerignore
