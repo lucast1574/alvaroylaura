@@ -1,0 +1,933 @@
+:root {
+    --bg-cream: #FDFBF7;
+    --text-color: #5A4A5E;
+    --purple-main: #8A4B9D;
+    --purple-dark: #4A2A54;
+    
+    /* Colores compartidos Sec 2, 4, 6, 8 y 10 */
+    --sec-bg-alt: #f5ede9;
+    --sec-text-alt: #7a3c9b;
+
+    /* Colores compartidos Sec 5, 7 y 9 */
+    --sec5-bg: #aa68cd;
+    --sec5-text: #f5ede9;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #EAEAEA;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: var(--bg-cream);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+    h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+    /* --- SECCIÓN 1: FOTO PRINCIPAL Y NOMBRES --- */
+.sec-1-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C1B4A9;
+}
+
+.sec-1-hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.85); 
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    width: 85%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-overlay hr {
+    border: 0;
+    border-top: 1px solid #ffffff;
+    margin: 15px 0;
+    opacity: 0.8;
+}
+
+.hero-overlay h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.hero-overlay .date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* --- SECCIÓN 2: VERSÍCULO (Limpia y Enmarcada) --- */
+.sec-2-versiculo {
+    position: relative; /* Necesario para que las flores se peguen a las esquinas */
+    background-color: var(--sec-bg-alt); /* Color crema */
+    padding: 100px 40px;
+    text-align: center;
+    overflow: hidden; /* Para que las flores no creen scroll si se salen un poquito */
+}
+
+.verse-content {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Por encima de las flores */
+}
+
+.verse-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--sec-text-alt); /* Morado */
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.verse-citation {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--sec-text-alt);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Estilos para las flores en las esquinas */
+.verse-flower {
+    position: absolute;
+    width: 150px; /* Tamaño delicado */
+    height: auto;
+    opacity: 0.6; /* Un poco transparentes para que no pesen tanto */
+}
+
+.top-left-flower {
+    top: 10px;
+    left: 10px;
+    transform: rotate(180deg); /* Ajusta la rotación según tu imagen */
+}
+
+.bottom-right-flower {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(180deg); /* Gira la flor para que apunte hacia adentro */
+}
+
+    /* --- SECCIÓN 3: FOTO SEPARADORA --- */
+.sec-3-photo {
+    width: 100%;
+    height: 300px;
+    background-color: #C1B4A9;
+    overflow: hidden;
+    display: block;
+}
+
+.sec-3-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* --- SECCIÓN 4: NOS CASAMOS Y PADRES (Elegante y Limpia) --- */
+.sec-4-casamos {
+    background-color: var(--sec-bg-alt);
+    color: var(--sec-text-alt);
+    padding: 60px 20px; /* Más aire arriba y abajo */
+}
+
+.casamos-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Reducimos un poco las flores para que no compitan con el texto */
+.flower-img {
+    width: 45px; 
+    height: auto;
+    object-fit: contain;
+    opacity: 0.85; /* Un pelín transparentes para suavizar */
+}
+
+.casamos-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.casamos-text .nos {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    line-height: 0.6;
+    margin-left: -30px;
+}
+
+.casamos-text .casamos {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+#saludo-personalizado {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.3rem;
+    color: var(--sec-text-alt);
+    line-height: 1.1;
+    margin: 10px 0 15px 0;
+    padding: 0 10px;
+}
+
+.invite-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 35px; /* Aire antes de la línea */
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* La nueva línea separadora */
+.divider-line {
+    border: 0;
+    height: 1px;
+    background-color: #d1c5bc; /* Color crema oscurecido */
+    width: 40%;
+    margin: 0 auto 30px auto;
+}
+
+/* --- TEXTO DE LOS PADRES --- */
+.parents-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bendicion-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic; /* Cursiva para darle un toque clásico */
+    margin: 0 0 20px 0;
+    color: var(--sec-text-alt);
+}
+
+.parents-names p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--sec-text-alt);
+}
+
+/* El ampersand (&) separador */
+.ampersand {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #C1B4A9; /* Color doradito/crema de contraste */
+    margin: 15px 0 10px 0;
+    line-height: 1;
+}
+
+/* --- SECCIÓN 5: RESERVA LA FECHA --- */
+.sec-5-reserva {
+    display: flex;
+    background-color: var(--sec5-bg);
+    color: var(--sec5-text);
+    min-height: 350px; 
+}
+
+.reserva-photo-container {
+    flex: 0 0 38%;
+    position: relative;
+    background-color: #e0d8d4;
+}
+
+.reserva-photo-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reserva-content {
+    flex: 1;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserva-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--sec5-text);
+}
+
+.reserva-content .subtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin: 0 0 15px 0;
+    letter-spacing: 0.5px;
+}
+
+.reserva-content-flower {
+    width: 90px;
+    margin: 5px 0 15px 0;
+    object-fit: contain;
+}
+
+.reserva-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin: 0 0 15px 0;
+    color: var(--sec5-text);
+}
+
+.calendar-container {
+    position: relative;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.calendar-row {
+    display: flex;
+    border-top: 1px solid var(--sec5-text);
+    border-bottom: 1px solid var(--sec5-text);
+    padding: 12px 0;
+}
+
+.cal-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.cal-col.middle {
+    border-left: 1px solid var(--sec5-text);
+    border-right: 1px solid var(--sec5-text);
+}
+
+.cal-col .cal-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.cal-col .cal-day {
+    font-size: 0.6rem;
+    font-weight: 600;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.circle-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    border: 1px solid var(--sec5-text);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* --- SECCIÓN 6: CEREMONIA --- */
+.sec-6-ceremonia {
+    background-color: var(--sec-bg-alt);
+    color: var(--sec-text-alt);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ceremonia-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ceremonia-title-wrapper .nuestra {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    line-height: 0.7;
+    margin-left: -20px;
+}
+
+.ceremonia-title-wrapper .ceremonia {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.gazebo-icon {
+    width: 60px;
+    height: auto;
+    margin: 5px 0 8px 0;
+    object-fit: contain;
+}
+
+.ceremonia-lugar {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    margin: 0 0 5px 0;
+}
+
+.ceremonia-hora {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    margin: 0 0 30px 0;
+}
+
+.btn-mapa {
+    background-color: var(--sec5-bg);
+    color: #ffffff;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-mapa:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-2px);
+}
+
+    /* --- SECCIÓN 7: DRESS CODE (Ilustración Abajo) --- */
+.sec-7-dresscode {
+    display: flex;
+    flex-direction: column; /* Esto pone el texto arriba y la imagen abajo */
+    align-items: center;
+    background-color: var(--sec5-bg);
+    color: var(--sec5-text);
+    padding: 60px 20px;
+}
+
+.dresscode-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px; /* Da un respiro antes de la ilustración */
+}
+
+.dresscode-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    margin: 0;
+    letter-spacing: 1px;
+    color: var(--sec5-text);
+}
+
+.dresscode-text .elegante {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 5px 0 20px 0;
+    display: block;
+}
+
+.dresscode-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem; /* Un poco más grande para mejor lectura */
+    line-height: 1.4;
+    margin: 0;
+}
+
+.dresscode-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dresscode-img-container img {
+    width: 100%;
+    max-width: 200px; /* Tamaño ideal para que destaque en el centro */
+    height: auto;
+    object-fit: contain;
+}
+
+    /* --- SECCIÓN 8: REGALOS --- */
+.sec-8-regalos {
+    background-color: var(--sec-bg-alt);
+    color: var(--sec-text-alt);
+    padding: 50px 50px;
+    border-top: 5px solid var(--sec5-bg);
+    border-bottom: 5px solid var(--sec5-bg);
+}
+
+.regalos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.regalos-text {
+    flex: 1;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.regalos-cuentas {
+    flex: 1;
+    font-size: 0.8rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.regalos-cuentas strong {
+    font-weight: 600;
+}
+
+.cuenta-block {
+    margin-bottom: 15px;
+}
+
+.regalos-flor {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+
+    /* --- SECCIÓN 9: HONOR (NUEVA ESTRUCTURA) --- */
+.sec-9-honor {
+    background-color: var(--sec5-bg);
+    color: var(--sec5-text);
+    padding: 80px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.honor-text-wrapper {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.honor-top-line {
+    display: flex;
+    align-items: center; /* Alinea perfectamente el texto con el número */
+    justify-content: center;
+}
+
+.honor-top-line .texto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-right: 15px;
+}
+
+.honor-top-line .number {
+    font-family: 'Montserrat', sans-serif; /* Fuente limpia, evita que parezca una 'I' */
+    font-size: 2.5rem; 
+    font-weight: 400;
+    line-height: 0.8; /* Ajusta la altura visual */
+}
+
+.honor-bottom-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-top: 15px; /* Espacio entre las dos líneas */
+}
+
+.honor-corner-flower {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.flower-top-right { top: 15px; right: 15px; }
+.flower-bottom-left { bottom: 15px; left: 15px; }
+
+.adults-only-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    margin-top: 30px; /* Separación del texto principal */
+    padding-top: 15px;
+    border-top: 1px solid rgba(245, 237, 233, 0.4); /* Línea sutil del color crema */
+    color: var(--sec5-text);
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    max-width: 300px;
+}
+
+.adults-only-text strong {
+    font-weight: 600; /* Resalta el "solo para adultos" */
+}
+
+    /* --- FOTO TRANSICIÓN --- */
+.sec-transition-photo {
+    width: 100%;
+    height: 300px;
+    background-color: #C1B4A9;
+    overflow: hidden;
+    display: block;
+}
+
+.sec-transition-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    /* --- SECCIÓN 10: CONFIRMACIÓN --- */
+.sec-10-confirmacion {
+    display: flex;
+    background-color: var(--sec-bg-alt);
+    color: var(--sec-text-alt);
+    min-height: 400px;
+}
+
+.confirmacion-text {
+    flex: 1;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.confirmacion-text .emocionados {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+}
+
+.confirmacion-text .esperamos {
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}
+
+.btn-confirmar {
+    background-color: var(--sec-text-alt);
+    color: #ffffff;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-confirmar:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-2px);
+}
+
+.confirmacion-photo-container {
+    flex: 0 0 42%;
+    position: relative;
+    background-color: #C1B4A9;
+}
+
+.confirmacion-photo-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    /* Ajustes responsivos generales */
+@media (max-width: 480px) {
+    .container { width: 100%; }
+    .parents-container { flex-direction: column; text-align: center; }
+    .parent-col { width: 100%; }
+    .sec-5-reserva, .sec-7-dresscode, .sec-10-confirmacion { flex-direction: column; }
+    .reserva-photo-container, .confirmacion-photo-container { width: 100%; height: 250px; flex: none; }
+    .reserva-photo-container img, .confirmacion-photo-container img { position: relative; height: 100%; }
+    .regalos-container { flex-direction: column; text-align: center; }
+    .regalos-text, .regalos-cuentas { text-align: center; }
+    .dresscode-text { padding-right: 0; margin-bottom: 20px; }
+        
+        /* Ajustes para el texto de honor en celulares */
+    .honor-top-line .texto { font-size: 1.5rem; margin-right: 10px; }
+    .honor-top-line .number { font-size: 4rem; }
+    .honor-bottom-line { font-size: 1.5rem; margin-top: 10px;}
+
+    #saludo-personalizado {
+        font-size: 2rem; /* Lo hacemos ligeramente más pequeño en móvil */
+    }
+}
+
+@media (max-width: 480px) {
+    .sec-10-confirmacion { flex-direction: column; }
+}
+
+/* --- ANIMACIONES SUAVES --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px); /* Empieza 40px más abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Sube a su posición original */
+}
+
+/* Opcional: Retrasos para que los elementos aparezcan en cascada (uno tras otro) */
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+/* --- BOTÓN DE MÚSICA FLOTANTE --- */
+.music-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: var(--sec-text-alt); /* Morado oscuro */
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--purple-dark);
+}
+
+/* Animación de latido cuando la música suena */
+.music-btn.playing {
+    animation: pulse-music 2s infinite;
+}
+
+@keyframes pulse-music {
+    0% { box-shadow: 0 0 0 0 rgba(122, 60, 155, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(122, 60, 155, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(122, 60, 155, 0); }
+}
+
+
+/* SECCIÓN SOBRE */
+
+
+/* --- SOBRE ANIMADO (Estructura de 4 solapas sólidas) --- */
+.envelope-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--sec5-bg);
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+
+.envelope-container {
+    cursor: pointer;
+    text-align: center;
+}
+
+/* El fondo del sobre (la parte interior trasera) */
+.envelope {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background-color: #d1c5bc; /* Más oscurito para dar sombra interior */
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin: 0 auto 20px;
+    transition: transform 0.4s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-5px);
+}
+
+/* --- LAS PIEZAS FRONTALES DEL SOBRE --- */
+
+.front-left {
+    position: absolute;
+    top: 0; left: 0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 160px solid #f5ede9;
+    z-index: 2;
+    border-radius: 5px 0 0 5px;
+}
+
+.front-right {
+    position: absolute;
+    top: 0; right: 0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-right: 160px solid #f5ede9;
+    z-index: 2;
+    border-radius: 0 5px 5px 0;
+}
+
+.front-bottom {
+    position: absolute;
+    bottom: 0; left: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 110px solid #ede1dc; /* Un poco más oscuro para separar */
+    z-index: 3;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Solapa superior que se abre */
+.flap {
+    position: absolute;
+    top: 0; left: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 115px solid #ede4df;
+    transform-origin: top;
+    transition: transform 1.2s ease-out, z-index 0s 0.3s; /* El z-index cambia a la mitad del giro */
+    z-index: 4;
+}
+
+/* SELLO DE CERA LISO (Atado a la solapa) */
+.flap::after {
+    content: '';
+    position: absolute;
+    /* Al usar bordes, la posición relativa es desde el vértice */
+    top: -25px; 
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    background-color: #d4af37;
+    background-image: radial-gradient(circle, #f3da92, #d4af37);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* --- LA CARTA --- */
+.letter {
+    position: absolute;
+    top: 10px;
+    left: 15px; /* Centrada en el nuevo ancho */
+    width: 290px;
+    height: 180px;
+    background-color: #ffffff;
+    z-index: 1; /* Escondida detrás de las solapas frontales */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1.2s ease 0.5s; /* Retraso para que la solapa se abra primero */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.letter-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    color: var(--sec-text-alt);
+}
+
+.open-text {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--sec5-text);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: pulse-text 1.5s infinite;
+}
+
+@keyframes pulse-text {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* --- ANIMACIONES AL ABRIR --- */
+.envelope-container.open .flap {
+    transform: rotateX(180deg);
+    z-index: 0; /* Se va para atrás al abrirse */
+}
+
+/* Desvanece el sello al abrir para que no se vea por detrás */
+.envelope-container.open .flap::after {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.envelope-container.open .letter {
+    transform: translateY(-120px); /* La carta sale elegantemente */
+}
+
+.envelope-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
