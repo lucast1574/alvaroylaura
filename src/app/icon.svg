@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9d976" />
+      <stop offset="50%" stop-color="#e6b800" />
+      <stop offset="100%" stop-color="#b38600" />
+    </linearGradient>
+    <linearGradient id="diamond" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#b2ebf2" />
+    </linearGradient>
+  </defs>
+
+  <!-- Anillo del novio (Atrás y a la derecha) -->
+  <circle cx="62" cy="58" r="24" fill="none" stroke="url(#gold)" stroke-width="8" />
+  
+  <!-- Anillo de la novia (Adelante y a la izquierda) -->
+  <circle cx="38" cy="58" r="24" fill="none" stroke="url(#gold)" stroke-width="8" />
+  
+  <!-- Diamante de Compromiso -->
+  <g transform="translate(38, 34)">
+    <!-- Engaste (base de oro) -->
+    <path d="M -8 -5 L 8 -5 L 5 4 L -5 4 Z" fill="url(#gold)" />
+    <!-- Gema principal -->
+    <polygon points="0,-18 12,-4 0,6 -12,-4" fill="url(#diamond)" stroke="#80deea" stroke-width="1" />
+    <!-- Brillo superior -->
+    <polygon points="-8,-10 8,-10 0,-18" fill="#ffffff" opacity="0.9" />
+    <!-- Reflejo lateral -->
+    <polygon points="-12,-4 0,-4 0,6" fill="#e0f7fa" opacity="0.6" />
+  </g>
+</svg>
