@@ -43,14 +43,30 @@ function WeddingContent() {
       
       setTimeout(() => {
         setEnvelopeHidden(true);
+        document.body.style.overflow = 'unset';
+        document.body.style.touchAction = 'auto';
       }, 1200);
     }, 1800);
   };
 
+  useEffect(() => {
+    if (!envelopeHidden) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'auto';
+    };
+  }, [envelopeHidden]);
+
   return (
     <main className="font-montserrat">
       {!envelopeHidden && (
-        <div id="envelope-screen" className="envelope-screen">
+        <div id="envelope-screen" className="envelope-screen" style={{ touchAction: 'none' }}>
           <div 
             className={`envelope-container ${envelopeOpen ? 'open' : ''}`} 
             onClick={handleOpenEnvelope}
