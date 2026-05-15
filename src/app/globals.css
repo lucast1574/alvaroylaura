@@ -17,19 +17,34 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-montserrat), sans-serif;
-    background-color: #EAEAEA;
+    background-color: #f0f0f0;
+    background-image: radial-gradient(#d1c5bc 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
     color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 480px;
-    margin: 0 auto;
+    margin: 40px auto;
     background-color: var(--bg-cream);
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
     overflow: hidden;
     text-align: center;
     position: relative;
+    border-radius: 8px;
+}
+@media (max-width: 480px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+    }
+}
+@media (min-width: 900px) {
+    .container {
+        max-width: 900px;
+    }
 }
 
 h1, h2, h3 {
@@ -723,40 +738,37 @@ h1, h2, h3 {
 .delay-2 { transition-delay: 0.4s; }
 .delay-3 { transition-delay: 0.6s; }
 
-/* --- BOTÓN DE MÚSICA --- */
-.music-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 55px;
-    height: 55px;
-    background-color: var(--sec-text-alt);
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.music-btn:hover {
-    transform: scale(1.1);
-    background-color: var(--purple-dark);
-}
-
-.music-btn.playing {
-    animation: pulse-music 2s infinite;
-}
-
-@keyframes pulse-music {
-    0% { box-shadow: 0 0 0 0 rgba(122, 60, 155, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(122, 60, 155, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(122, 60, 155, 0); }
+/* --- RESPONSIVIDAD DESKTOP --- */
+@media (min-width: 900px) {
+    .sec-5-reserva, .sec-10-confirmacion {
+        flex-direction: row !important;
+        min-height: 450px;
+    }
+    .reserva-photo-container, .confirmacion-photo-container {
+        flex: 0 0 50% !important;
+        height: auto !important;
+    }
+    .reserva-photo-container img, .confirmacion-photo-container img {
+        position: absolute;
+    }
+    .reserva-content, .confirmacion-text {
+        flex: 1;
+        padding: 60px;
+    }
+    .sec-8-regalos .regalos-container {
+        flex-direction: row !important;
+        align-items: flex-start;
+    }
+    .regalos-text {
+        padding-right: 40px;
+        border-right: 1px solid rgba(122, 60, 155, 0.2);
+    }
+    .sec-1-hero {
+        height: 70vh;
+    }
+    .hero-overlay h1 {
+        font-size: 4.5rem;
+    }
 }
 
 /* --- SOBRE --- */

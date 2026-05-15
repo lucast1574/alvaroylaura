@@ -1,14 +1,13 @@
 'use client';
 
-import { useState, useEffect, useRef, Suspense } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 
 function WeddingContent() {
   const [envelopeOpen, setEnvelopeOpen] = useState(false);
   const [envelopeHidden, setEnvelopeHidden] = useState(false);
-  const [musicPlaying, setMusicPlaying] = useState(false);
   const searchParams = useSearchParams();
-  const audioRef = useRef(null);
 
   const nombre = searchParams.get('nombre');
   const pases = searchParams.get('pases');
@@ -38,12 +37,6 @@ function WeddingContent() {
   const handleOpenEnvelope = () => {
     setEnvelopeOpen(true);
     
-    if (audioRef.current) {
-      audioRef.current.play().then(() => {
-        setMusicPlaying(true);
-      }).catch(e => console.log("Auto-play blocked", e));
-    }
-
     setTimeout(() => {
       // Start fading out the screen
       const screen = document.getElementById('envelope-screen');
@@ -55,16 +48,6 @@ function WeddingContent() {
     }, 1800);
   };
 
-  const toggleMusic = () => {
-    if (audioRef.current) {
-      if (musicPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setMusicPlaying(!musicPlaying);
-    }
-  };
 
   return (
     <main>
@@ -90,7 +73,13 @@ function WeddingContent() {
 
       <div className="container">
         <section className="sec-1-hero">
-          <img src="/image/TU_FOTO_PRINCIPAL.jpg" alt="Álvaro y Laura Hero" />
+          <Image 
+            src="/image/TU_FOTO_PRINCIPAL.jpg" 
+            alt="Álvaro y Laura Hero" 
+            fill 
+            priority
+            style={{ objectFit: 'cover' }}
+          />
           <div className="hero-overlay fade-in">
             <hr />
             <h1>ÁLVARO & LAURA</h1>
@@ -100,8 +89,20 @@ function WeddingContent() {
         </section>
 
         <section className="sec-2-versiculo">
-          <img src="/image/FLOR_ESQUINA_DERECHA.png" className="verse-flower top-left-flower" alt="decoración" />
-          <img src="/image/FLOR_ESQUINA_IZQUIERDA.png" className="verse-flower bottom-right-flower" alt="decoración" />
+          <Image 
+            src="/image/FLOR_ESQUINA_DERECHA.png" 
+            className="verse-flower top-left-flower" 
+            alt="decoración" 
+            width={150} 
+            height={150}
+          />
+          <Image 
+            src="/image/FLOR_ESQUINA_IZQUIERDA.png" 
+            className="verse-flower bottom-right-flower" 
+            alt="decoración" 
+            width={150} 
+            height={150}
+          />
           <div className="verse-content fade-in">
             <p className="verse-main">
               &quot;Deléitate asimismo<br />en Jehová,<br />
@@ -112,7 +113,13 @@ function WeddingContent() {
         </section>
 
         <section className="sec-3-photo fade-in">
-          <img src="/image/FOTO_FUENTE_JARDIN.jpg" alt="Fuente Jardín" />
+          <Image 
+            src="/image/FOTO_FUENTE_JARDIN.jpg" 
+            alt="Fuente Jardín" 
+            width={900} 
+            height={600} 
+            style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+          />
         </section>
 
         <section className="sec-4-casamos">
@@ -147,12 +154,23 @@ function WeddingContent() {
 
         <section className="sec-5-reserva">
           <div className="reserva-photo-container fade-in">
-            <img src="/image/FOTO_RESERVA.jpg" alt="Álvaro y Laura Reserva" />
+            <Image 
+              src="/image/FOTO_RESERVA.jpg" 
+              alt="Álvaro y Laura Reserva" 
+              fill 
+              style={{ objectFit: 'cover' }}
+            />
           </div>
           <div className="reserva-content fade-in delay-1">
             <h2>RESERVA</h2>
             <p className="subtitle">esta fecha especial</p>
-            <img src="/image/FLOR_RESERVA_BLANCA.png" className="reserva-content-flower" alt="Flor Reserva Blanca" />
+            <Image 
+              src="/image/FLOR_RESERVA_BLANCA.png" 
+              className="reserva-content-flower" 
+              alt="Flor Reserva Blanca" 
+              width={90} 
+              height={90}
+            />
             <h3>Septiembre</h3>
             <div className="calendar-container">
               <div className="circle-overlay"></div>
@@ -179,7 +197,13 @@ function WeddingContent() {
             <span className="nuestra">Nuestra</span>
             <span className="ceremonia">CEREMONIA</span>
           </div>
-          <img src="/image/ICONO_GAZEBO.png" className="gazebo-icon fade-in delay-1" alt="Ícono Gazebo" />
+          <Image 
+            src="/image/ICONO_GAZEBO.png" 
+            className="gazebo-icon fade-in delay-1" 
+            alt="Ícono Gazebo" 
+            width={60} 
+            height={60}
+          />
           <h2 className="ceremonia-lugar fade-in delay-1">Villa Luis Adolfo II</h2>
           <h3 className="ceremonia-hora fade-in delay-1">11:30 am</h3>
           <a href="https://maps.app.goo.gl/tmPiTEEaNYiNCrtD7" className="btn-mapa" target="_blank" rel="noopener noreferrer">VER MAPA</a>
@@ -192,7 +216,13 @@ function WeddingContent() {
             <p>Evitar los colores blanco, beige e ivory similares<br />serán reservados para la novia.</p>
           </div>
           <div className="dresscode-img-container fade-in delay-1">
-            <img src="/image/ILUSTRACION_TRAJES.png" alt="Dress Code Trajes" />
+            <Image 
+              src="/image/ILUSTRACION_TRAJES.png" 
+              alt="Dress Code Trajes" 
+              width={200} 
+              height={200} 
+              style={{ height: 'auto' }}
+            />
           </div>
         </section>
 
@@ -217,30 +247,63 @@ function WeddingContent() {
               </div>
             </div>
           </div>
-          <img src="/image/FLOR_REGALOS.png" className="regalos-flor fade-in delay-2" alt="Flor Regalos" />
+          <Image 
+            src="/image/FLOR_REGALOS.png" 
+            className="regalos-flor fade-in delay-2" 
+            alt="Flor Regalos" 
+            width={120} 
+            height={120}
+          />
         </section>
 
         <section className="sec-9-honor">
-          <img src="/image/FLOR_ESQUINA_SUP_DER.png" className="honor-corner-flower flower-top-right fade-in" alt="Flor Esquina 1" />
-          <img src="/image/FLOR_ESQUINA_INF_IZQ.png" className="honor-corner-flower flower-bottom-left fade-in delay-1" alt="Flor Esquina 2" />
+          <Image 
+            src="/image/FLOR_ESQUINA_SUP_DER.png" 
+            className="honor-corner-flower flower-top-right fade-in" 
+            alt="Flor Esquina 1" 
+            width={130} 
+            height={130}
+          />
+          <Image 
+            src="/image/FLOR_ESQUINA_INF_IZQ.png" 
+            className="honor-corner-flower flower-bottom-left fade-in delay-1" 
+            alt="Flor Esquina 2" 
+            width={130} 
+            height={130}
+          />
           
-          <div className="honor-text-wrapper fade-in delay-1">
-            <div className="honor-top-line">
-              <span className="texto">Hemos reservado</span>
-              <span className="number">{pases || '2'}</span>
+          {pases && (
+            <div className="honor-text-wrapper fade-in delay-1">
+              <div className="honor-top-line">
+                <span className="texto">Hemos reservado</span>
+                <span className="number">{pases}</span>
+              </div>
+              <div className="honor-bottom-line">
+                {pases === "1" ? "lugar en su honor." : "lugares en su honor."}
+              </div>
+              
+              <p className="adults-only-text fade-in delay-2">
+                Amamos a sus pequeños, pero nuestra boda será un evento <strong>solo para adultos</strong>.<br />Agradecemos su comprensión.
+              </p>
             </div>
-            <div className="honor-bottom-line">
-              {pases === "1" ? "lugar en su honor." : "lugares en su honor."}
+          )}
+          {!pases && (
+            <div className="honor-text-wrapper fade-in delay-1">
+              <p className="adults-only-text" style={{ borderTop: 'none', marginTop: 0 }}>
+                Amamos a sus pequeños, pero nuestra boda será un evento <strong>solo para adultos</strong>.<br />Agradecemos su comprensión.
+              </p>
             </div>
-            
-            <p className="adults-only-text fade-in delay-2">
-              Amamos a sus pequeños, pero nuestra boda será un evento <strong>solo para adultos</strong>.<br />Agradecemos su comprensión.
-            </p>
-          </div>
+          )}
         </section>
 
         <section className="sec-transition-photo fade-in">
-          <img src="/image/FOTO_TRANSICION.jpg" alt="Pareja Transición" />
+          <Image 
+            src="/image/FOTO_TRANSICION.jpg" 
+            alt="Pareja Transición" 
+            width={900} 
+            height={300} 
+            style={{ width: '100%', height: '300px', objectFit: 'cover' }}
+          />
         </section>
 
         <section className="sec-10-confirmacion">
@@ -260,20 +323,15 @@ function WeddingContent() {
           </div>
           
           <div className="confirmacion-photo-container fade-in delay-1">
-            <img src="/image/FOTO_CONFIRMACION.jpg" alt="Álvaro y Laura Confirmación" />
+            <Image 
+              src="/image/FOTO_CONFIRMACION.jpg" 
+              alt="Álvaro y Laura Confirmación" 
+              fill 
+              style={{ objectFit: 'cover' }}
+            />
           </div>
         </section>
       </div>
-
-      <audio ref={audioRef} loop src="/nuestra_cancion.MP3" />
-
-      <button 
-        className={`music-btn ${musicPlaying ? 'playing' : ''}`} 
-        onClick={toggleMusic}
-        title={musicPlaying ? "Pausar música" : "Reproducir música"}
-      >
-        <span>{musicPlaying ? '⏸️' : '🎵'}</span>
-      </button>
     </main>
   );
 }
