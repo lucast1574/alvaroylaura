@@ -34,6 +34,33 @@ function WeddingContent() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('music-btn');
+    const icon = document.getElementById('music-icon');
+
+    if (!audio || !btn) return;
+
+    const updateIcon = () => {
+      if (!icon) return;
+      icon.textContent = audio.paused ? '🎵' : '🔊';
+    };
+
+    const toggle = () => {
+      if (audio.paused) {
+        audio.play().catch(() => {});
+      } else {
+        audio.pause();
+      }
+      updateIcon();
+    };
+
+    btn.addEventListener('click', toggle);
+    updateIcon();
+
+    return () => btn.removeEventListener('click', toggle);
+  }, []);
+
   const handleOpenEnvelope = () => {
     setEnvelopeOpen(true);
     
@@ -342,6 +369,13 @@ function WeddingContent() {
           </div>
         </section>
       </div>
+      <audio id="bg-music" loop preload="auto">
+        <source src="/nuestra_cancion.MP3" type="audio/mpeg" />
+      </audio>
+
+      <button id="music-btn" className="music-btn" title="Reproducir música">
+        <span id="music-icon">🎵</span>
+      </button>
     </main>
   );
 }
