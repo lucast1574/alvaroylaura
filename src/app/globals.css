@@ -99,4 +99,15 @@
     @apply text-sec5-text font-medium tracking-[2px] uppercase animate-pulse;
     font-family: var(--font-montserrat);
   }
+
+  /* --- BOTÓN DE MÚSICA --- */
+  .music-btn {
+    @apply fixed bottom-6 right-6 w-14 h-14 bg-white/70 backdrop-blur-md border border-sec5-bg/30 rounded-full flex items-center justify-center cursor-pointer z-[9999] shadow-lg transition-all duration-300;
+  }
+  .music-btn:hover {
+    @apply scale-110 bg-white/90 border-sec5-bg;
+  }
+  .music-btn span {
+    @apply text-2xl filter drop-shadow-sm;
+  }
 }
