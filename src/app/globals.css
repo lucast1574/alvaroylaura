@@ -37,7 +37,9 @@
 
   /* --- SOBRE ANIMADO --- */
   .envelope-screen {
-    @apply fixed top-0 left-0 w-full h-screen bg-sec5-bg z-[9999999] flex items-center justify-center transition-all duration-1200;
+    @apply fixed inset-0 w-full bg-sec5-bg z-[9999999] flex flex-col items-center justify-center transition-all duration-1200;
+    height: 100vh;
+    height: 100dvh;
   }
   .envelope-screen.hidden {
     @apply opacity-0 invisible;
