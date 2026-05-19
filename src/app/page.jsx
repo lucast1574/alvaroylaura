@@ -200,7 +200,7 @@ function WeddingContent() {
           </div>
           <div className="flex-1 px-[10px] py-10 lg:p-[60px] flex flex-col items-center justify-center fade-in delay-1">
             <h2 className="font-cormorant text-[2.5rem] tracking-widest">RESERVA</h2>
-            <p className="text-[1.2rem] font-light mb-[15px] tracking-[0.5px]">esta fecha especial</p>
+            <p className="text-[1.5rem] font-light mb-[15px] tracking-[0.5px]">esta fecha especial</p>
             <Image 
               src="/image/FLOR_RESERVA_BLANCA.png" 
               alt="Flor Reserva Blanca" 
