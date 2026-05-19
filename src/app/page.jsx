@@ -209,23 +209,7 @@ function WeddingContent() {
               className="my-[5px] lg:my-[15px] object-contain"
             />
             <h3 className="font-cormorant text-[2rem] mb-[15px]">Septiembre</h3>
-            <div className="relative w-full max-w-[220px] mx-auto">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[65px] h-[65px] border border-sec5-text rounded-full pointer-events-none z-[1]"></div>
-              <div className="flex border-t border-b border-sec5-text py-3">
-                <div className="flex-1 flex flex-col items-center justify-center z-[2]">
-                  <span className="font-cormorant text-[1.8rem] leading-none">04</span>
-                  <span className="text-[0.6rem] font-semibold mt-[5px] tracking-widest">VIE</span>
-                </div>
-                <div className="flex-1 flex flex-col items-center justify-center z-[2] border-l border-r border-sec5-text">
-                  <span className="font-cormorant text-[1.8rem] leading-none">05</span>
-                  <span className="text-[0.6rem] font-semibold mt-[5px] tracking-widest">SAB</span>
-                </div>
-                <div className="flex-1 flex flex-col items-center justify-center z-[2]">
-                  <span className="font-cormorant text-[1.8rem] leading-none">06</span>
-                  <span className="text-[0.6rem] font-semibold mt-[5px] tracking-widest">DOM</span>
-                </div>
-              </div>
-            </div>
+            <h3 className="font-cormorant text-[1.6rem] mb-[30px]">Sábado 5, 2026</h3>
           </div>
         </section>
 
