@@ -342,7 +342,7 @@ function WeddingContent() {
               Esperamos contar con su confirmación<br />
               hasta el 15 de julio.
             </p>
-            <a href="https://w.app/vo4tkf" className="bg-sec-text-alt text-white text-[0.85rem] tracking-[2px] uppercase no-underline px-[35px] py-[15px] rounded-[30px] shadow-[0_4px_10px_rgba(0,0,0,0.15)] transition-all hover:bg-purple-dark hover:-translate-y-0.5" target="_blank" rel="noopener noreferrer">CONFIRMAR<br />ASISTENCIA</a>
+            <a href="https://wa.me/51987037013" className="bg-sec-text-alt text-white text-[0.85rem] tracking-[2px] uppercase no-underline px-[35px] py-[15px] rounded-[30px] shadow-[0_4px_10px_rgba(0,0,0,0.15)] transition-all hover:bg-purple-dark hover:-translate-y-0.5" target="_blank" rel="noopener noreferrer">CONFIRMAR<br />ASISTENCIA</a>
             <p className="text-[0.85rem] font-bold leading-relaxed mt-5 mb-[5px]">
               Whatsapp: 987 037 013
             </p>
