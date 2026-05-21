@@ -181,9 +181,9 @@ function WeddingContent() {
           <div className="flex flex-col items-center fade-in delay-2">
             <p className="font-cormorant italic text-[1.3rem] mb-5">Con la bendición de Dios y nuestros padres</p>
             <div className="text-[0.85rem] leading-relaxed text-sec-text-alt">
-              <p>Einstein Seith Reyna Romero<br />Orfa Isabel Ruiz Lavado</p>
+              <p>Einstein Reyna Romero<br />Isabel Ruiz Lavado</p>
               <span className="font-great-vibes text-[2rem] text-accent-gold my-[15px] lg:my-[10px] block leading-none">&</span>
-              <p>Raúl Enrique Santillán Alván<br />Mirian Consuelo Arévalo Lozano</p>
+              <p>Raúl Santillán Alván<br />Mirian Arévalo Lozano</p>
             </div>
           </div>
         </section>
