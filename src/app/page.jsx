@@ -342,7 +342,9 @@ function WeddingContent() {
               Esperamos contar con su confirmación<br />
               hasta el 15 de julio.
             </p>
-            <p class="wp-text fade-in">Por favor, confirma tu asistencia directamente con nuestra Wedding Planner:</p>
+            <p className="text-[0.85rem] font-bold leading-relaxed mb-[30px]">
+              Por favor, confirma tu asistencia directamente con nuestra Wedding Planner:
+            </p>
             <a href="https://wa.me/51987037013?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Álvaro%20y%20Laura" className="bg-sec-text-alt text-white text-[0.85rem] tracking-[2px] uppercase no-underline px-[35px] py-[15px] rounded-[30px] shadow-[0_4px_10px_rgba(0,0,0,0.15)] transition-all hover:bg-purple-dark hover:-translate-y-0.5" target="_blank" rel="noopener noreferrer">CONFIRMAR<br />ASISTENCIA</a>
             <p className="text-[0.85rem] font-bold leading-relaxed mt-5 mb-[5px]">
               Whatsapp: 987 037 013
