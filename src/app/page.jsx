@@ -235,7 +235,7 @@ function WeddingContent() {
           <div className="w-full text-center mb-[35px] fade-in">
             <h2 className="font-cormorant text-[2.2rem] tracking-widest">DRESS CODE</h2>
             <span className="font-great-vibes text-[3.5rem] leading-none my-[5px] lg:my-[20px] block">Elegante</span>
-            <p className="text-[0.85rem] leading-relaxed">Evitar los colores blanco, beige e ivory similares<br />serán reservados para la novia.</p>
+            <p className="text-[0.85rem] leading-relaxed">Evitar los colores blanco, beige e ivory similares<br />serán reservados para la novia y el novio.</p>
           </div>
           <div className="w-full flex justify-center fade-in delay-1">
             <Image 
@@ -340,7 +340,7 @@ function WeddingContent() {
             </p>
             <p className="text-[0.85rem] font-bold leading-relaxed mb-[30px]">
               Esperamos contar con su confirmación<br />
-              hasta el 15 de julio.
+              hasta el 15 de Agosto.
             </p>
             <p className="text-[0.85rem] font-bold leading-relaxed mb-[30px]">
               Por favor, confirma tu asistencia directamente con nuestra Wedding Planner:
