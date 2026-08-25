@@ -331,7 +331,7 @@ function WeddingContent() {
           />
         </section>
 
-        {/* SECCIÓN 10: CONFIRMACIÓN */}
+        {/* SECCIÓN 10: CONFIRMACIÓN
         <section className="flex flex-col lg:flex-row bg-sec-bg-alt text-sec-text-alt min-h-[400px] lg:min-h-[450px]">
           <div className="flex-1 p-[50px] lg:p-[60px] flex flex-col items-center justify-center text-center fade-in">
             <p className="font-cormorant text-[1.4rem] leading-relaxed mb-[15px]">
@@ -359,7 +359,7 @@ function WeddingContent() {
               className="object-cover"
             />
           </div>
-        </section>
+        </section> */}
       </div>
       <audio id="bg-music" loop preload="auto">
         <source src="/nuestra_cancion.MP3" type="audio/mpeg" />
